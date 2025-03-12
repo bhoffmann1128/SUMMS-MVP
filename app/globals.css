@@ -1,0 +1,88 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 255,255,255;
+  --background-start-rgb: 255,255,255;
+  --background-end-rgb: 255,255,255;
+  --primary-color: #c11919;
+}
+
+/* @media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}*/
+
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+h1,h2,h3,h4 {
+  font-family: var(--font-inter);
+  font-weight: 200;
+}
+
+h1 {font-size: 2.2em}
+h2 {font-size: 1.7em}
+h3 {font-size: 1.4em}
+h4 {font-size: 1.2em}
+h1,h2,h3,h4,p,a {
+  color: black;
+}
+
+.btn-primary {
+  background: var(--primary-color);
+  color: white;
+  padding: 5px 10px;
+  text-align: center;
+  display:inline-block;
+}
+
+.banner-main {
+  background: transparent url(https://blacklabelagency.com/wp-content/uploads/2024/03/SUMMS-BANNER-1.png) no-repeat;
+  background-size: cover;
+}
+
+.summ-list-item {
+  padding: 25px; 
+}
+
+.account-popmenu {
+  position: absolute;
+  right: 0;
+  top: 70px;
+  background: white;
+  padding: 25px;
+  z-index:10;
+  box-shadow: -5px 5px 5px #3333;
+  transition: .3s all;
+  opacity: 0;
+  width: 0px;
+  height: 0;
+  overflow: hidden;
+}
+
+.account-popmenu.active {
+  opacity: 1;
+  width: 150px;
+  height: auto;
+  
+}
+
